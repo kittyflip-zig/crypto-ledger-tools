@@ -8,6 +8,12 @@ It provides reusable Python utilities for normalizing crypto transaction CSV fil
 
 This project is designed for publication review. It does not include real transaction records, real wallet address values, API credentials, or personal data.
 
+## Why this matters
+
+Japanese crypto users often receive transaction history CSV files in different formats from each exchange. This makes local recordkeeping, JPY conversion, and basic reconciliation difficult.
+
+`crypto-ledger-tools` provides a local-first, non-custodial, no-API-key approach to normalize and inspect those records without uploading private data to a cloud service.
+
 ## Scope
 
 Included:
