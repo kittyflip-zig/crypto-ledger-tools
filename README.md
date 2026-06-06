@@ -4,7 +4,7 @@
 
 HT Designs Software / OSS Lab のOSS候補として準備しています。
 
-英語版: [README.en.md](README.en.md)
+English Version: [README.en.md](README.en.md)
 
 ---
 
