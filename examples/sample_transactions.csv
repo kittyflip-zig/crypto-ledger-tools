@@ -1,0 +1,6 @@
+tx_id,timestamp,asset,side,quantity,total_value,fee,quote_currency,note
+demo-001,2026-01-05T10:00:00,COIN,buy,2.0,200.00,1.00,USD,fictional first buy
+demo-002,2026-01-12T10:00:00,COIN,buy,1.0,120.00,0.60,USD,fictional second buy
+demo-003,2026-02-01T10:00:00,COIN,sell,1.5,210.00,0.90,USD,fictional partial sell
+demo-004,2026-02-15T10:00:00,TOKEN,buy,10.0,50.00,0.25,USD,fictional token buy
+demo-005,2026-03-01T10:00:00,TOKEN,sell,4.0,28.00,0.15,USD,fictional token sell
