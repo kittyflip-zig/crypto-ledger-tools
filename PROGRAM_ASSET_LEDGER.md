@@ -51,6 +51,9 @@ It is a lightweight category label for program-related assets such as source cod
 | `CLT-ASSET-008` | Branding | `assets/repository-open-graph.png` | active | GitHub Open Graph / social preview banner |
 | `CLT-ASSET-009` | Internal control | `INTERNAL_MANAGEMENT_MDA.md` | active | Internal publication control MDA |
 | `CLT-ASSET-010` | Publication review | `OSS_PUBLICATION_REVIEW.md` | active | Public release review record |
+| `CLT-ASSET-011` | Branding | `assets/images/crypto-ledger-tools-banner-flow-light-v01.png` | candidate | Light flow-style banner candidate |
+| `CLT-ASSET-012` | Branding | `assets/images/crypto-ledger-tools-banner-private-jpy-v01.png` | candidate | Privacy / JPY-ready banner candidate |
+| `CLT-ASSET-013` | Branding | `assets/images/crypto-ledger-tools-banner-dashboard-dark-v01.png` | candidate | Dark dashboard-style banner candidate |
 
 ---
 
@@ -73,6 +76,21 @@ Rules:
 - Keep final public banner in `assets/`.
 - If logo or brand color changes, update this ledger and regenerate the banner.
 - Do not include private source paths in public README.
+
+---
+
+## Banner Image Candidates
+
+| Asset ID | File | Intended Use | Notes |
+|---|---|---|---|
+| `CLT-ASSET-011` | `assets/images/crypto-ledger-tools-banner-flow-light-v01.png` | README / social preview candidate | Explains CSV normalization, Python processing, reconciliation, and local-first handling. |
+| `CLT-ASSET-012` | `assets/images/crypto-ledger-tools-banner-private-jpy-v01.png` | Repository header / social preview candidate | Emphasizes private-by-design, clean records, CSV, reconciliation, and JPY readiness. |
+| `CLT-ASSET-013` | `assets/images/crypto-ledger-tools-banner-dashboard-dark-v01.png` | README / release announcement candidate | Emphasizes local-first normalization, reconciliation, JPY output, and no API keys. |
+
+Selection note:
+
+- Use one image as the official GitHub Open Graph image after HIDE review.
+- Keep non-selected images as design candidates unless repository size becomes an issue.
 
 ---
 
@@ -100,4 +118,5 @@ HTD-05DOP-DOP09-D01
 
 | Doc ID | Date | Change Class | Author / Role | Summary | Reason |
 |---|---|---|---|---|---|
+| `HTD-05DOP-DOP09-D01` | 2026-06-06 | patch | Codex / DevOps | Registered three generated banner image candidates. | HIDE provided banner images for repository branding. |
 | `HTD-05DOP-DOP09-D01` | 2026-06-06 | initial | Codex / DevOps | Created program asset ledger and registered Open Graph banner. | HIDE requested branding banner and program asset ledger. |
