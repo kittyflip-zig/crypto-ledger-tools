@@ -184,6 +184,7 @@ work/output/my_jpy.csv
 - [docs/github_release_setup.md](docs/github_release_setup.md)
 - [docs/disclaimer.md](docs/disclaimer.md)
 - [INTERNAL_MANAGEMENT_MDA.md](INTERNAL_MANAGEMENT_MDA.md)
+- [PROGRAM_ASSET_LEDGER.md](PROGRAM_ASSET_LEDGER.md)
 
 ---
 

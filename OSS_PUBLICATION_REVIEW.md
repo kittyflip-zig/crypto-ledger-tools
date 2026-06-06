@@ -43,6 +43,7 @@
 Internal management file:
 
 - `INTERNAL_MANAGEMENT_MDA.md` is maintained for HTDESIGNS internal publication control and is not required in the public OSS package.
+- `PROGRAM_ASSET_LEDGER.md` is maintained for HTDESIGNS internal program asset tracking and repository branding control.
 
 ## 2. Excluded File List
 

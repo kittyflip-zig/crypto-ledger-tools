@@ -24,7 +24,10 @@ classifiers = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8"]
+dev = [
+  "pytest>=8",
+  "pillow>=10",
+]
 
 [project.scripts]
 crypto-ledger-tools = "crypto_ledger_tools.cli:main"
