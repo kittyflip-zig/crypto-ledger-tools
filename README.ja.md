@@ -210,3 +210,56 @@ New-Item -ItemType Directory -Force -Path work/input, work/output
 - [docs/japan_roadmap.md](docs/japan_roadmap.md)
 - [docs/csv_template_handling.md](docs/csv_template_handling.md)
 - [docs/disclaimer.md](docs/disclaimer.md)
+
+
+---
+
+## ステーキング・報酬の数量をJPY時価へ換算する
+
+交換業者の月次明細などで、ステーキング報酬について「受取数量は分かるが、受取時の円時価が書かれていない」場合に、日次終値を使って暫定評価できます。
+
+入力する報酬CSV:
+
+```csv
+reward_id,received_at,asset,quantity,source,note
+r1,2026-07-11T09:00:00+09:00,COIN,10,Example Exchange,staking reward
+```
+
+市場価格CSV:
+
+```csv
+date,asset,quote_currency,close,provider,provider_symbol,session_timestamp,source_retrieved_at,is_final
+2026-07-11,COIN,USD,2.50,example_market,COIN-USD,2026-07-11T00:00:00Z,2026-07-12T00:05:00Z,1
+2026-07-11,USD,JPY,151.00,example_fx,JPY=X,2026-07-11T00:00:00Z,2026-07-12T00:05:00Z,1
+```
+
+実行:
+
+```powershell
+python -m crypto_ledger_tools.cli value-rewards examples/sample_reward_events.csv --asset-rates examples/sample_asset_daily_rates.csv --output work/output/reward_valuations.csv
+```
+
+出力では以下を残します。
+
+- 受取日
+- 暗号資産数量
+- 使用した暗号資産終値
+- 終値の評価通貨
+- USD/JPYレート
+- FXレート日
+- JPY換算額
+- valuation_method
+- status
+
+### 評価ルール
+
+1. 同日の直接JPY終値があれば優先
+2. なければ同日のUSD終値 × USD/JPY
+3. USD/JPYが休日等で存在しない場合、初期設定では3日前までの直近利用可能レートを使用
+4. どのFX日を使ったかを `fx_rate_date` に必ず記録
+5. 暗号資産価格がない場合は `missing_asset_rate`
+6. FXがない場合は `missing_fx_rate`
+
+算出結果は `provisional_daily_close` として扱います。
+
+日次終値は取得時点そのもののスポット価格ではないため、税務上の最終値を保証するものではありません。取引所が取得時点の円評価額またはより精密な時価資料を提供している場合は、そちらを優先して検算してください。
