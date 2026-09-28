@@ -1,0 +1,2 @@
+reward_id,received_at,asset,quantity,source,note
+r1,2026-07-11T09:00:00+09:00,COIN,10,Example Exchange,staking reward
