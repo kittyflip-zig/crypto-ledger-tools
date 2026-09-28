@@ -219,3 +219,14 @@ Sponsorリンクは、GitHub Sponsors設定完了後にこのREADMEへ追加し�
 ## License
 
 MIT License. See [LICENSE](LICENSE).
+
+
+## Staking / reward valuation
+
+Quantity-only crypto rewards can be valued against a daily asset-rate CSV with:
+
+```bash
+python -m crypto_ledger_tools.cli value-rewards examples/sample_reward_events.csv --asset-rates examples/sample_asset_daily_rates.csv --output work/output/reward_valuations.csv
+```
+
+The output records the asset close, quote currency, FX rate/date, JPY value, valuation method, and status. Daily-close valuation is explicitly marked provisional because it may differ from the exact spot value at the acquisition timestamp.
